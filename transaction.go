@@ -45,6 +45,7 @@ type PrevOut struct {
 	Value       uint64 `json:"value"`
 	N           uint64 `json:"n"`
 	Script      string `json:"script"`
+	Xpub        Xpub   `json:"xpub"`
 }
 
 // Out the main structure of the inputs.
@@ -58,6 +59,13 @@ type Out struct {
 	Value       uint64 `json:"value"`
 	N           uint64 `json:"n"`
 	Script      string `json:"script"`
+	Xpub        Xpub   `json:"xpub"`
+}
+
+// Xpub
+type Xpub struct {
+	M    string `json:"m"`
+	Path string `json:"path"`
 }
 
 // Txs transaction set.
